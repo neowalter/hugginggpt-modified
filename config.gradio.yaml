@@ -46,10 +46,6 @@ tprompt:
     #2 Model Selection Stage: Given the user request and the parsed tasks, the AI assistant helps the user to select a suitable model from a list of models to process the user request. The assistant should focus more on the description of the model and find the model that has the most potential to solve requests and tasks. Also, prefer models with local inference endpoints for speed and stability.
   response_results: >-
     #4 Response Generation Stage: With the task execution logs, the AI assistant needs to describe the process and inference results.
-demos_or_presteps:
-  parse_task: demos/demo_parse_task.json
-  choose_model: demos/demo_choose_model.json
-  response_results: demos/demo_response_results.json 
 prompt:
   parse_task: >+
     The chat log [ {{context}} ] may contain the resources I mentioned. Now I input { {{input}} }. Please parse the input into tasks, output in a strict JSON object:
